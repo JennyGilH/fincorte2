@@ -1,0 +1,118 @@
+CSS
+/* Estilos generales y del encabezado */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #790c6a;
+    margin: 0;
+    padding: 20px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #59044A;
+    color: rgb(255, 255, 255);
+    padding: 15px 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.carrito-info {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    color: #59044A;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.catalogo {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los productos bajen a la siguiente línea si no caben */
+}
+
+/* Diseño de la Tarjeta  */
+.producto-card {
+    background-color: #ebcede;
+    width: 320px;
+    border-radius: 12px;
+    overflow: hidden; /* Corta la imagen en las esquinas curvas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-contenido {
+    padding: 20px 20px 15px 20px;
+    flex-grow: 1; /* Empuja el pie hacia abajo para que todas las tarjetas midan lo mismo */
+}
+
+.etiqueta {
+    color: #8c01b6; 
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.producto-titulo {
+    color: #111827; 
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.producto-descripcion {
+    color: #6b7280; 
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Pie de la tarjeta: Precio y Botón */
+.producto-pie {
+    padding: 15px 20px;
+    border-top: 1px solid #4c0961;
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precio {
+    color: #111827;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-comprar {
+    background-color: #59044A; 
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #ff66a3;
+}
+
+.btn-comprar:active {
+    transform: scale(0.95);
+}

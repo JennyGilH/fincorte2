@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda JG - Muñecos Tejidos</title>
+    <!-- Conexión con tu archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado y Carrito -->
+    <header class="encabezado">
+        <h1>🧸 Tienda JG</h1>
+        <div class="carrito-info">
+            Carrito: <span id="cantidad-articulos">0</span> | Total: $<span id="total-pagar">0</span>
+        </div>
+    </header>
+
+    <!-- Catálogo de Productos -->
+    <main class="catalogo">
+        
+        <!-- Producto 1 -->
+        <article class="producto-card">
+            <img src="fotos/conejo.jpg" alt="Conejo" class="producto-imagen">
+            <div class="producto-contenido">
+                <span class="etiqueta">Hecho a mano</span>
+                <h2 class="producto-titulo">Conejo</h2>
+                <p class="producto-descripcion">Tejido a mano con hilo de algodón hipoalergénico.</p>
+            </div>
+            <div class="producto-pie">
+                <span class="precio">$45.000</span>
+                <button class="btn-comprar" onclick="agregarAlCarrito(45000)">Añadir</button>
+            </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="producto-card">
+            <img src="fotos/jirafa.jpg" alt="Jirafa" class="producto-imagen">
+            <div class="producto-contenido">
+                <span class="etiqueta">Hecho a mano</span>
+                <h2 class="producto-titulo">Jirafa</h2>
+                <p class="producto-descripcion">Amigurumi suave, perfecto para decorar cualquier espacio.</p>
+            </div>
+            <div class="producto-pie">
+                <span class="precio">$38.000</span>
+                <button class="btn-comprar" onclick="agregarAlCarrito(38000)">Añadir</button>
+            </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="producto-card">
+            <img src="fotos/oso.jpg" alt="Oso" class="producto-imagen">
+            <div class="producto-contenido">
+                <span class="etiqueta">Hecho a mano</span>
+                <h2 class="producto-titulo">Oso</h2>
+                <p class="producto-descripcion">Tejido a mano con hilo de algodón hipoalergénico.</p>
+            </div>
+            <div class="producto-pie">
+                <span class="precio">$50.000</span>
+                <button class="btn-comprar" onclick="agregarAlCarrito(50000)">Añadir</button>
+            </div>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="producto-card">
+            <img src="fotos/pollo.jpg" alt="Pollito" class="producto-imagen">
+            <div class="producto-contenido">
+                <span class="etiqueta">Hecho a mano</span>
+                <h2 class="producto-titulo">Pollito</h2>
+                <p class="producto-descripcion">Tejido a mano con hilo de algodón hipoalergénico.</p>
+            </div>
+            <div class="producto-pie">
+                <span class="precio">$10.000</span>
+                <button class="btn-comprar" onclick="agregarAlCarrito(10000)">Añadir</button>
+            </div>
+        </article>
+
+        <!-- Producto 5 -->
+        <article class="producto-card">
+            <img src="fotos/raton.jpg" alt="Raton" class="producto-imagen">" alt="Raton" class="producto-imagen">
+            <div class="producto-contenido">
+                <span class="etiqueta">Hecho a mano</span>
+                <h2 class="producto-titulo">Raton</h2>
+                <p class="producto-descripcion">Tejido a mano con hilo de algodón hipoalergénico.</p>
+            </div>
+            <div class="producto-pie">
+                <span class="precio">$65.000</span>
+                <button class="btn-comprar" onclick="agregarAlCarrito(65000)">Añadir</button>
+            </div>
+        </article>
+
+        <!-- Producto 6 -->
+        <article class="producto-card">
+            <img src="fotos/zorro.jpg" alt="Zorro" class="producto-imagen">
+            <div class="producto-contenido">
+                <span class="etiqueta">Hecho a mano</span>
+                <h2 class="producto-titulo">Zorro</h2>
+                <p class="producto-descripcion">Tejido a mano con hilo de algodón hipoalergénico.</p>
+            </div>
+            <div class="producto-pie">
+                <span class="precio">$65.000</span>
+                <button class="btn-comprar" onclick="agregarAlCarrito(65000)">Añadir</button>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Lógica de JavaScript -->
+    <script>
+        let total = 0;
+        let cantidad = 0;
+
+        function agregarAlCarrito(precioProducto) {
+            total = total + precioProducto;
+            cantidad = cantidad + 1;
+
+            document.getElementById('cantidad-articulos').innerText = cantidad;
+            document.getElementById('total-pagar').innerText = total.toLocaleString('es-CO');
+            
+            console.log("Producto añadido. Total actual: $" + total);
+        }
+    </script>
+</body>
+</html>
